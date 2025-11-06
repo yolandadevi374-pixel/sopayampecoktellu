@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warung Sop Ayam Pecok Tellu - Jember</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffaf5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ff9800, #ffc107);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: #ff9800; }
+
+    .hero {
+      background: url('warung.jpeg') center/cover no-repeat;
+      height: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+      font-size: 2rem;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero button {
+      background: #ff9800;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      margin-top: 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background: #e68900;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff9800;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    /* --- RAPIKAN MENU --- */
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      color: #ff9800;
+      margin: 15px 15px 5px;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      margin: 0 15px 20px;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .contact {
+      background-color: #fff8e1;
+      border-radius: 15px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .contact p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .contact a {
+      color: #ff9800;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: linear-gradient(135deg, #ff9800, #ffc107);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    footer p {margin: 0;}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Warung Sop Ayam Pecok Tellu</h1>
+    <p>Lezat, hangat, dan bikin nagih – kini hadir di Jember!</p>
+  </header>
+
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#kontak">Kontak</a>
+    <a href="#lokasi">Lokasi</a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h2>Selamat Datang di Warung Sop Ayam Pecok Tellu</h2>
+      <p>Rasakan cita rasa hangat khas Jember</p>
+      <button onclick="window.open('https://wa.me/628113560280?text=Halo%2C%20saya%20ingin%20pesan%20Sop%20Ayam%20di%20Warung%20Sop%20Ayam%20Pecok%20Tellu','_blank')">
+        📲 Pesan Sekarang
+      </button>
+    </div>
+  </div>
+
+  <section id="menu">
+    <h2>🍗 Menu Andalan Kami</h2>
+    <div class="menu">
+      <div class="card">
+        <img src="original.jpeg" alt="Sop Ayam Original">
+        <h3>Sop Ayam Original</h3>
+        <p>Kuah gurih segar dengan potongan ayam lembut. <br>💰 Rp 15.000</p>
+      </div>
+
+      <div class="card">
+        <img src="sopiga.jpeg" alt="Sop Iga Sapi">
+        <h3>Sop Iga Sapi</h3>
+        <p>Iga sapi empuk dengan kuah gurih rempah alami. <br>💰 Rp 25.000</p>
+      </div>
+
+      <div class="card">
+        <img src="spesial.jpeg" alt="Sop Ayam Spesial">
+        <h3>Sop Ayam Spesial</h3>
+        <p>Campuran ayam kampung dan sayur segar, rasa istimewa. <br>💰 Rp 20.000</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>📞 Kontak Kami</h2>
+    <div class="contact">
+      <p>
+        📍 <b>Alamat:</b> Jl. Gajah Mada No.159, Kaliwates Kidul, Kaliwates,<br>
+        Kabupaten Jember, Jawa Timur 68131<br><br>
+        📱 <b>Telepon/WhatsApp:</b> <a href="https://wa.me/628113560280" target="_blank">0811 356 0280</a><br>
+        ⏰ <b>Jam Buka:</b> 08.00 - 21.00 WIB
+      </p>
+    </div>
+  </section>
+
+  <section id="lokasi">
+    <h2>📍 Lokasi Warung Kami</h2>
+    <iframe 
+      src="https://www.google.com/maps?q=Jl.+Gajah+Mada+No.159,+Kaliwates+Kidul,+Kaliwates,+Kabupaten+Jember,+Jawa+Timur+68131&hl=id&z=17&output=embed"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <footer>
+    <p>© 2025 Warung Sop Ayam Pecok Tellu | Dibuat dengan ❤️ oleh Devi</p>
+  </footer>
+
+</body>
+</html>
